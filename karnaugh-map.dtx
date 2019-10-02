@@ -487,7 +487,7 @@
     % fill terms
     \foreach \cell in {0,1,2,...,\@karnaughmap@local@max@} {%
       \IfSubStr{\@karnaughmap@var@usedcells@}{,\cell,}{}{%
-        \path (\@karnaughmap@func@decimaltobin@{\cell}) node {#1};
+        \path (\@karnaughmap@func@decimaltobin@{\cell}) node {$^{^{\cell}}$#1};
       }
     }
   \endgroup
@@ -717,7 +717,7 @@
   \foreach \cell in {#1} {%
     % only write to cell if it is empty otherwise fail silently
     \IfSubStr{\@karnaughmap@var@usedcells@}{,\cell,}{}{%
-      \path (\@karnaughmap@func@decimaltobin@{\cell}) node {#2};
+      \path (\@karnaughmap@func@decimaltobin@{\cell}) node {$^{^{\cell}}$#2};
     }
   }
   % update \@karnaughmap@var@usedcells@
